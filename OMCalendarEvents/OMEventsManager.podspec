@@ -5,7 +5,7 @@ s.ios.deployment_target = '12.0'
 s.name = "OMEventsManager"
 s.summary = "OMEventsManager lets a user manage events."
 
-s.version = "0.1.29"
+s.version = "0.0.2"
 
 s.license = { :type => "MIT", :file => "LICENSE" }
 
