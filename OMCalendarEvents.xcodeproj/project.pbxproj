@@ -197,7 +197,6 @@
 				8401D08426C475F20048FBFF /* Sources */,
 				8401D08526C475F20048FBFF /* Frameworks */,
 				8401D08626C475F20048FBFF /* Resources */,
-				85E15D6814D92BE55DC9F2C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,23 +281,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		85E15D6814D92BE55DC9F2C3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B34C5CED60B231F8E116945F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
