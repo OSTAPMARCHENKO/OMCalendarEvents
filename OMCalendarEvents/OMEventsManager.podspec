@@ -2,8 +2,8 @@ Pod::Spec.new do |s|
 
 s.platform = :ios
 s.ios.deployment_target = '12.0'
-s.name = "OMEventsManager"
-s.summary = "OMEventsManager lets a user manage events."
+s.name = "OMCalendarEvents"
+s.summary = "OMCalendarEvents lets a user manage events."
 
 s.version = "0.0.2"
 
@@ -20,7 +20,7 @@ s.framework = "UIKit"
 s.dependency 'GoogleAPIClientForREST/Calendar'
 s.dependency 'GoogleSignIn', '~> 5.0'
 
-s.source_files = "OMEventsManager/**/*.{h,m,swift}"
+s.source_files = "OMCalendarEvents/**/*.{h,m,swift}"
 
 s.swift_version = "5.0"
 
