@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GTMSessionFetcher/GTMSessionFetcher.h>
+#import <GTMSessionFetcher/GTMSessionFetcherService.h>
 
 //! Project version number for OMCalendarEvents.
 FOUNDATION_EXPORT double OMCalendarEventsVersionNumber;
