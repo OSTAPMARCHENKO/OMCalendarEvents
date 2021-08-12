@@ -8,10 +8,6 @@ import UIKit
 import EventKit
 import EventKitUI
 
-public typealias EventsManagerError = (EventManagerError?) -> Void
-public typealias EventsManagerEmptyCompletion = () -> Void
-public typealias EventsManagerEventsCompletion = ([EventModel]) -> Void
-
 public class EventsCalendarManager {
 
     // MARK: Completions
@@ -37,9 +33,8 @@ public class EventsCalendarManager {
 
     // MARK: Public(Methods)
 
-    /// by default manager will show modal screen
-    /// add event to eventKit(native calendar)
-
+    /// add the new event to your calendar
+    
     public func add(
         event: EventAddMethod,
         to calendar: CalendarType,
@@ -50,20 +45,10 @@ public class EventsCalendarManager {
         switch calendar {
         case .google(let controller, let clientID, let calendarID):
             self.googleManager = GoogleCalendarManager(on: controller, for: clientID, calendarID: calendarID)
-            self.addEventGoogleCalendar(event, onSuccess: onSuccess, onError: onError)
+            self.googleManager?.addEvent(event, onSuccess: onSuccess, onError: onError)
 
         case .native:
             self.nativeManager.addEvent(event, onSuccess: onSuccess, onError: onError)
         }
-    }
-
-    // MARK: Mthods(Private)
-    
-    private func addEventGoogleCalendar(
-        _ event: EventAddMethod,
-        onSuccess: @escaping EventsManagerEmptyCompletion,
-        onError: EventsManagerError?) {
-
-        googleManager?.addEvent(event, onSuccess: onSuccess, onError: onError)
     }
 }

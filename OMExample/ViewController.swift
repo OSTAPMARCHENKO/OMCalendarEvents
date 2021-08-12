@@ -20,8 +20,8 @@ class ViewController: UIViewController {
 
     private lazy var someDefaultEvent: EventModel = {
         EventModel(
-            start: Date().addingTimeInterval(-3600),
-            end: Date(),
+            start: Date(),
+            end: Date().addingTimeInterval(3600),
             title: "Event test title",
             description: "Test event description",
             url: "https://some.test.url"
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             event: .easy(event),
             to: .google(
                 on: self,
-                clientID: "*** your google client_id ***"
+                clientID: "*** your google clientid ***"
             ),
             onSuccess: {
                 completion?()
@@ -76,10 +76,10 @@ class ViewController: UIViewController {
             print("accessStatus - \(status)")
 
         case .error(let error):
-            print(error.localizedDescription)
+            print("error - \(error.localizedDescription)")
 
         case .message(let message):
-            print(message)
+            print("message - \(message)")
 
         default:
             return
@@ -89,12 +89,12 @@ class ViewController: UIViewController {
     // MARK: IBActions
 
     @IBAction private func googlePressed() {
-        addEventToNativeCalendar(
-           someDefaultEvent,
-           completion: {
-            /// Do something
-           }
-       )
+        addEventToGoogleCalendar(
+            someDefaultEvent,
+            completion: {
+                /// Do something
+            }
+        )
     }
 
     @IBAction private func iosPressed() {

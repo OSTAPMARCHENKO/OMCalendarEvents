@@ -6,8 +6,8 @@
 //
 
 public enum EventAddMethod {
+    
     case easy(_ event: EventModel)
 
-    /// fromModal -  available ONLY for native
-    case fromModal(_ event: EventModel?)
+    case fromModal(_ event: EventModel?) ///  -  available ONLY for native
 }

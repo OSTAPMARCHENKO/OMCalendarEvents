@@ -47,7 +47,9 @@ class NativeEventManager: NSObject {
                 self?.generateAndAddEvent(event, onSuccess: onSuccess, onError: onError)
 
             case .fromModal(let event):
-                self?.presentEventCalendarDetailModal(event: event)
+                DispatchQueue.main.async {
+                    self?.presentEventCalendarDetailModal(event: event)
+                }
             }
         },
         onError: { error in

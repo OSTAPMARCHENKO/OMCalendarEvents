@@ -17,6 +17,7 @@ pod 'OMCalendarEvents'
 check examples of how easy you can add events to IOS and GOOGLE calendars
 
 ***
+0. Info.plist must contain an NSCalendarsUsageDescription
 1. create an event
 2. choose the calendar type
 3. receive status(success or fail)

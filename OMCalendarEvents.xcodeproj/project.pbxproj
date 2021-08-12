@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D8E2DAE4A8A4E7B28E0054A /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E618EA36A31A0BB6F19A8685 /* Pods_OMCalendarEvents_OMExample.framework */; };
 		8401D08D26C475F20048FBFF /* OMCalendarEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8401D08B26C475F20048FBFF /* OMCalendarEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8401D09F26C476A80048FBFF /* EventAddMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D09526C476A80048FBFF /* EventAddMethod.swift */; };
 		8401D0A026C476A80048FBFF /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D09626C476A80048FBFF /* EventManager.swift */; };
@@ -22,8 +21,36 @@
 		8401D0B626C476EE0048FBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B526C476EE0048FBFF /* Assets.xcassets */; };
 		8401D0B926C476EE0048FBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B726C476EE0048FBFF /* LaunchScreen.storyboard */; };
 		8401D12526C557290048FBFF /* GoogleIntegration.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8401D12426C557290048FBFF /* GoogleIntegration.rtf */; };
+		8401D17F26C579FF0048FBFF /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E618EA36A31A0BB6F19A8685 /* Pods_OMCalendarEvents_OMExample.framework */; };
+		8401D18226C57A330048FBFF /* OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8401D08826C475F20048FBFF /* OMCalendarEvents.framework */; };
+		8401D18326C57A330048FBFF /* OMCalendarEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8401D08826C475F20048FBFF /* OMCalendarEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8401D18826C5B2270048FBFF /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D18726C5B2270048FBFF /* Completions.swift */; };
 		FB998E4F9B47C3BB90C79D70 /* Pods_OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202AF9EC7C2ACA68899350E8 /* Pods_OMCalendarEvents.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8401D18426C57A330048FBFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8401D07F26C475F20048FBFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8401D08726C475F20048FBFF;
+			remoteInfo = OMCalendarEvents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8401D18126C57A000048FBFF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8401D18326C57A330048FBFF /* OMCalendarEvents.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		06F580FDD548E6A91169D415 /* Pods-OMCalendarEvents-OMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents-OMExample.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents-OMExample/Pods-OMCalendarEvents-OMExample.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +74,7 @@
 		8401D0B826C476EE0048FBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8401D0BA26C476EE0048FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8401D12426C557290048FBFF /* GoogleIntegration.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = GoogleIntegration.rtf; sourceTree = "<group>"; };
+		8401D18726C5B2270048FBFF /* Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
 		BE7C63E1F9D2DD494C0AEFC0 /* Pods-OMCalendarEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.release.xcconfig"; sourceTree = "<group>"; };
 		CB2ACFB27A3A25DCCC06AF5E /* Pods-OMCalendarEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		E618EA36A31A0BB6F19A8685 /* Pods_OMCalendarEvents_OMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents_OMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,7 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D8E2DAE4A8A4E7B28E0054A /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */,
+				8401D17F26C579FF0048FBFF /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */,
+				8401D18226C57A330048FBFF /* OMCalendarEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +135,13 @@
 		8401D09326C476A80048FBFF /* EventsManager */ = {
 			isa = PBXGroup;
 			children = (
-				8401D09426C476A80048FBFF /* EventAddMethod */,
 				8401D09626C476A80048FBFF /* EventManager.swift */,
-				8401D09726C476A80048FBFF /* EventModel */,
-				8401D09926C476A80048FBFF /* NativeEventManager.swift */,
-				8401D09A26C476A80048FBFF /* CalendarType */,
 				8401D09C26C476A80048FBFF /* GoogleCalendarManager.swift */,
+				8401D09926C476A80048FBFF /* NativeEventManager.swift */,
+				8401D18626C5B21C0048FBFF /* Completions */,
+				8401D09426C476A80048FBFF /* EventAddMethod */,
+				8401D09726C476A80048FBFF /* EventModel */,
+				8401D09A26C476A80048FBFF /* CalendarType */,
 				8401D09D26C476A80048FBFF /* Error */,
 			);
 			path = EventsManager;
@@ -160,6 +190,14 @@
 				8401D0BA26C476EE0048FBFF /* Info.plist */,
 			);
 			path = OMExample;
+			sourceTree = "<group>";
+		};
+		8401D18626C5B21C0048FBFF /* Completions */ = {
+			isa = PBXGroup;
+			children = (
+				8401D18726C5B2270048FBFF /* Completions.swift */,
+			);
+			path = Completions;
 			sourceTree = "<group>";
 		};
 		99E12D76C422E66CD08A6096 /* Pods */ = {
@@ -226,10 +264,12 @@
 				8401D0A826C476ED0048FBFF /* Resources */,
 				CBF028AF6F642CFA290C3930 /* [CP] Embed Pods Frameworks */,
 				618349B109F33CCDC90C08A9 /* [CP] Copy Pods Resources */,
+				8401D18126C57A000048FBFF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8401D18526C57A330048FBFF /* PBXTargetDependency */,
 			);
 			name = OMExample;
 			productName = OMExample;
@@ -397,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8401D0A026C476A80048FBFF /* EventManager.swift in Sources */,
+				8401D18826C5B2270048FBFF /* Completions.swift in Sources */,
 				8401D0A126C476A80048FBFF /* EventModel.swift in Sources */,
 				8401D09F26C476A80048FBFF /* EventAddMethod.swift in Sources */,
 				8401D0A226C476A80048FBFF /* NativeEventManager.swift in Sources */,
@@ -416,6 +457,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8401D18526C57A330048FBFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8401D08726C475F20048FBFF /* OMCalendarEvents */;
+			targetProxy = 8401D18426C57A330048FBFF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8401D0B226C476ED0048FBFF /* Main.storyboard */ = {
