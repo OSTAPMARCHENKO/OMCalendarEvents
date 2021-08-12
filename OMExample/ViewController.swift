@@ -10,14 +10,20 @@ import OMCalendarEvents
 
 class ViewController: UIViewController {
 
+    private lazy var eventManager: EventsCalendarManager = {
+        EventsCalendarManager()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let qq = EventsCalendarManager()
-        // Do any additional setup after loading the view.
+        addEvent()
     }
 
+
+    private func addEvent() {
+
+    }
 
 }
 

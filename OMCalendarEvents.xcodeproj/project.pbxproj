@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,7 @@
 		8401D0B426C476ED0048FBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B226C476ED0048FBFF /* Main.storyboard */; };
 		8401D0B626C476EE0048FBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B526C476EE0048FBFF /* Assets.xcassets */; };
 		8401D0B926C476EE0048FBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B726C476EE0048FBFF /* LaunchScreen.storyboard */; };
+		8401D12526C557290048FBFF /* GoogleIntegration.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8401D12426C557290048FBFF /* GoogleIntegration.rtf */; };
 		FB998E4F9B47C3BB90C79D70 /* Pods_OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202AF9EC7C2ACA68899350E8 /* Pods_OMCalendarEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		8401D0B526C476EE0048FBFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8401D0B826C476EE0048FBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8401D0BA26C476EE0048FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8401D12426C557290048FBFF /* GoogleIntegration.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = GoogleIntegration.rtf; sourceTree = "<group>"; };
 		BE7C63E1F9D2DD494C0AEFC0 /* Pods-OMCalendarEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.release.xcconfig"; sourceTree = "<group>"; };
 		CB2ACFB27A3A25DCCC06AF5E /* Pods-OMCalendarEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		E618EA36A31A0BB6F19A8685 /* Pods_OMCalendarEvents_OMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents_OMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 			children = (
 				8401D09326C476A80048FBFF /* EventsManager */,
 				8401D08B26C475F20048FBFF /* OMCalendarEvents.h */,
+				8401D12426C557290048FBFF /* GoogleIntegration.rtf */,
 				8401D08C26C475F20048FBFF /* Info.plist */,
 			);
 			path = OMCalendarEvents;
@@ -277,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8401D12526C557290048FBFF /* GoogleIntegration.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

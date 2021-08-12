@@ -19,14 +19,11 @@ public class EventsCalendarManager {
     var onError: EventsManagerError?
     var onSuccess: EventsManagerEmptyCompletion?
 
-    static let shared: EventsCalendarManager = EventsCalendarManager()
-
     // MARK: Properties(Private)
 
     private lazy var eventStore: EKEventStore = {
         EKEventStore()
     }()
-
 
     private lazy var nativeManager: NativeEventManager = {
         NativeEventManager()
@@ -36,15 +33,14 @@ public class EventsCalendarManager {
 
     // MARK: Initialization
     
-    public init() {
-    }
+    public init() { }
 
     // MARK: Public(Methods)
 
     /// by default manager will show modal screen
     /// add event to eventKit(native calendar)
 
-    func add(
+    public func add(
         event: EventAddMethod,
         to calendar: CalendarType,
         onSuccess: @escaping EventsManagerEmptyCompletion,

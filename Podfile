@@ -9,7 +9,7 @@ target 'OMCalendarEvents' do
   pod 'GoogleSignIn', '~> 5.0'
 
   target 'OMExample' do
-    pod 'OMCalendarEvents'
+    pod 'OMCalendarEvents', '~> 0.0.5'
   end
 end
 

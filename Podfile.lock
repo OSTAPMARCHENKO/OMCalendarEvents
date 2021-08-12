@@ -28,7 +28,7 @@ PODS:
 DEPENDENCIES:
   - GoogleAPIClientForREST/Calendar
   - GoogleSignIn (~> 5.0)
-  - OMCalendarEvents (~> 0.0.4)
+  - OMCalendarEvents
 
 SPEC REPOS:
   trunk:
@@ -47,6 +47,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   OMCalendarEvents: d2029632a9289d66203bfd74fde80b2208163eda
 
-PODFILE CHECKSUM: db4f1b34346dc487e3478e7f7588ac9b456ef989
+PODFILE CHECKSUM: d4290d944a87d675682c2c4ab3d39e8746fb929c
 
 COCOAPODS: 1.10.2
