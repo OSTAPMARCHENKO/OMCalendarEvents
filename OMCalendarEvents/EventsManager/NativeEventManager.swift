@@ -6,7 +6,7 @@ import EventKitUI
 
 private extension EventModel {
     init(_ event: EKEvent) {
-        self.init(id: event.eventIdentifier, startDate: event.startDate, endDate: event.endDate, title: event.title, description: event.notes ?? "")
+        self.init(start: event.startDate, end: event.endDate, title: event.title, id: event.eventIdentifier, description: event.notes, url: nil)
     }
 }
 
@@ -177,7 +177,7 @@ class NativeEventManager: NSObject {
     private func generateEvent(event: EventModel) -> EKEvent {
 
         let eventTitle: String? = event.title.isHtml() ? event.title.attributedText()?.string : event.title
-        let eventDescription: String? = event.description.isHtml() ? event.description.attributedText()?.string : event.description
+        let eventDescription: String? = event.description?.isHtml() ?? false ? event.description?.attributedText()?.string : event.description
         let newEvent = EKEvent(eventStore: eventStore)
 
         var startDate = event.startDate

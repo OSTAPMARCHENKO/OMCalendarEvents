@@ -5,7 +5,7 @@
 //  Created by Ostap Marchenko on 7/30/21.
 //
 
-enum EventAddMethod {
+public enum EventAddMethod {
     case easy(_ event: EventModel)
 
     /// fromModal -  available ONLY for native

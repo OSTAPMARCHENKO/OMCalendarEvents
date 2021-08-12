@@ -14,5 +14,5 @@ public enum CalendarType {
     }
 
     case native
-    case google(clientID: String, on: UIViewController, calendarID: String = Constants.currentUserCalendar)
+    case google(on: UIViewController, clientID: String, calendarID: String = Constants.currentUserCalendar)
 }

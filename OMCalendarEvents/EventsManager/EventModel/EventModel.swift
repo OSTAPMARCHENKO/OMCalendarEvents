@@ -8,10 +8,26 @@
 import Foundation
 
 public struct EventModel: Codable {
-    var id: String?
     let startDate: Date
     let endDate: Date
     let title: String
-    let description: String
-    var url: String? = nil
+    var description: String?
+    var url: String?
+    var id: String?
+
+    init(
+         start: Date,
+         end: Date,
+         title: String,
+         id: String? = nil,
+         description: String? = nil,
+         url: String? = nil
+    ) {
+        self.id = id
+        self.startDate = start
+        self.endDate = end
+        self.title = title
+        self.description = description
+        self.url = url
+    }
 }

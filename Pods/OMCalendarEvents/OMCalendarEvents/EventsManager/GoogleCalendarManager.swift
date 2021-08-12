@@ -4,24 +4,7 @@ import UIKit
 import GoogleSignIn
 import GoogleAPIClientForREST
 
-/// GOOGLE CALENDAR  INTEGRATION
 
-/// 1. - https://console.developers.google.com/ - create new project with current app Bundle ID
-
-/// 2. - Go to dashboard, click Enable APIS AND SERVICES, choose calendar API service and enable it
-
-/// 3. - Choose credentials from the side menu and click CREATE CREDENTIALS Link from top of the page and add OAuth Client ID
-
-/// 4. - Go to the Firebase console, ADD new project with exiting app
-
-/// 5. -  Add firebase google plist to current app
-
-/// 6. ATTENTION!!! ADD to your signIn method this options, if application using GoogleSignIn
-///   *********
-///   GIDSignIn.sharedInstance().scopes = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/calendar.events"]
-///   *********
-///   SCOPES options are REQUIRED!!!
-///   Without them, you will not have access to the  calendar
 
 class GoogleCalendarManager {
 
@@ -36,7 +19,8 @@ class GoogleCalendarManager {
 
     // 4.  Try to login user if user not loggedIn
 
-    /// **************************** ---------------- ******************  ------------- *********************
+    /// **********************************************************************
+    /// ******************************************************
 
     private enum Constants {
         static let maxRetryInterval: TimeInterval = 15

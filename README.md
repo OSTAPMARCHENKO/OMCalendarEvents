@@ -12,13 +12,15 @@ pod 'OMCalendarEvents'
 
 ## Usage
 
-```python
-import OMCalendarEvents
+```swift
 
- private lazy var eventManager: EventsCalendarManager = {
-        EventsCalendarManager()
-    }()
+check examples of how easy you can add events to IOS and GOOGLE calendars
 
+***
+1. create an event
+2. choose the calendar type
+3. receive status(success or fail)
+***
 ```
 
 ## Google integration
