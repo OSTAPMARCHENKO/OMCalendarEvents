@@ -8,9 +8,9 @@ import UIKit
 import EventKit
 import EventKitUI
 
-typealias EventsManagerError = (EventManagerError?) -> Void
-typealias EventsManagerEmptyCompletion = () -> Void
-typealias EventsManagerEventsCompletion = ([EventModel]) -> Void
+public typealias EventsManagerError = (EventManagerError?) -> Void
+public typealias EventsManagerEmptyCompletion = () -> Void
+public typealias EventsManagerEventsCompletion = ([EventModel]) -> Void
 
 public class EventsCalendarManager {
 

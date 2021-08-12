@@ -1,24 +1,33 @@
 # OMCalendarEvents
-Manage your events easy
 
-# Getting Started
+OMCalendarEvents is a Swift library for event managing in Google and IOS calendars.
 
-It only takes a few simple steps to install and setup OMCalendarEvents to your project.
+## Installation
 
-Installation:
+It only takes a few simple steps to install OMCalendarEvents to your project.
 
-CocoaPods
-
-The easiest way to install OMCalendarEvents is to use CocoaPods. To do so, simply add the following line to your Podfile:
-
+```bash
 pod 'OMCalendarEvents'
+```
 
-Setup
+## Usage
 
-1. Import OMCalendarEvents
+```python
+import OMCalendarEvents
 
-2. Initialization
+ private lazy var eventManager: EventsCalendarManager = {
+        EventsCalendarManager()
+    }()
 
-privare lazy var OMCalendarEvents {
-    OMCalendarEvents()
-}
+```
+
+## Google integration
+If you don't know how to integrate Google calendar in your app, you can check "GoogleIntegration.rtf" file inside the project
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://github.com/OSTAPMARCHENKO/OMCalendarEvents/blob/0.0.5/LICENSE)

@@ -7,10 +7,10 @@
 
 import UIKit
 
-enum CalendarType {
+public enum CalendarType {
 
-    enum Constants {
-        static let currentUserCalendar = "primary"
+    public enum Constants {
+        public static let currentUserCalendar = "primary"
     }
 
     case native

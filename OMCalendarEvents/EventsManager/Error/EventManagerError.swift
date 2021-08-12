@@ -7,7 +7,7 @@
 
 import EventKit
 
-enum EventManagerError {
+public enum EventManagerError {
 
     case authorizationStatus(EKAuthorizationStatus)
 
