@@ -12,15 +12,14 @@ typealias EventsManagerError = (EventManagerError?) -> Void
 typealias EventsManagerEmptyCompletion = () -> Void
 typealias EventsManagerEventsCompletion = ([EventModel]) -> Void
 
-final
-class EventsCalendarManager {
+public class EventsCalendarManager {
 
     // MARK: Completions
 
     var onError: EventsManagerError?
     var onSuccess: EventsManagerEmptyCompletion?
 
-    public static let shared: EventsCalendarManager = EventsCalendarManager()
+    static let shared: EventsCalendarManager = EventsCalendarManager()
 
     // MARK: Properties(Private)
 
@@ -40,9 +39,9 @@ class EventsCalendarManager {
     /// by default manager will show modal screen
     /// add event to eventKit(native calendar)
 
-    public func addEvent(
-        _ event: EventAddMethod = .fromModal(),
-        to calendar: CalendarType = .native,
+    func add(
+        event: EventAddMethod,
+        to calendar: CalendarType,
         onSuccess: @escaping EventsManagerEmptyCompletion,
         onError: EventsManagerError?
     ) {

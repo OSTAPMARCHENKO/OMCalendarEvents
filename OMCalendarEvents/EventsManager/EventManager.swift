@@ -34,6 +34,11 @@ public class EventsCalendarManager {
 
     private var googleManager: GoogleCalendarManager?
 
+    // MARK: Initialization
+    
+    public init() {
+    }
+
     // MARK: Public(Methods)
 
     /// by default manager will show modal screen
