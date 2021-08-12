@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EventModel: Codable {
+open struct EventModel: Codable {
     var id: String?
     let startDate: Date
     let endDate: Date

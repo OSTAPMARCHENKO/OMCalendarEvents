@@ -10,7 +10,8 @@ private extension EventModel {
     }
 }
 
-class NativeEventManager: NSObject {
+final
+open class NativeEventManager: NSObject {
 
     private enum Constants {
 

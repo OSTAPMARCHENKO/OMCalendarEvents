@@ -13,7 +13,7 @@ typealias EventsManagerEmptyCompletion = () -> Void
 typealias EventsManagerEventsCompletion = ([EventModel]) -> Void
 
 final
-class EventsCalendarManager {
+open class EventsCalendarManager {
 
     // MARK: Completions
 

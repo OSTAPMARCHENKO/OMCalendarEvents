@@ -23,7 +23,8 @@ import GoogleAPIClientForREST
 ///   SCOPES options are REQUIRED!!!
 ///   Without them, you will not have access to the  calendar
 
-class GoogleCalendarManager {
+final
+open class GoogleCalendarManager {
 
     // MARK: Comments
 
