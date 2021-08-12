@@ -12,7 +12,6 @@ typealias EventsManagerError = (EventManagerError?) -> Void
 typealias EventsManagerEmptyCompletion = () -> Void
 typealias EventsManagerEventsCompletion = ([EventModel]) -> Void
 
-final
 open class EventsCalendarManager {
 
     // MARK: Completions
