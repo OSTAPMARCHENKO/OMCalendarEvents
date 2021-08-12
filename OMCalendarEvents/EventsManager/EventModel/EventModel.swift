@@ -15,7 +15,7 @@ public struct EventModel: Codable {
     var url: String?
     var id: String?
 
-    init(
+    public init(
          start: Date,
          end: Date,
          title: String,

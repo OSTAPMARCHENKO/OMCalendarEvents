@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     }()
 
     private lazy var someDefaultEvent: EventModel = {
+
         EventModel(
             start: Date().addingTimeInterval(-3600),
             end: Date(),

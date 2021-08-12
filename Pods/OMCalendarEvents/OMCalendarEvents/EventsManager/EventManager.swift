@@ -48,7 +48,7 @@ public class EventsCalendarManager {
     ) {
 
         switch calendar {
-        case .google(let clientID, let controller, let calendarID):
+        case .google(let controller, let clientID, let calendarID):
             self.googleManager = GoogleCalendarManager(on: controller, for: clientID, calendarID: calendarID)
             self.addEventGoogleCalendar(event, onSuccess: onSuccess, onError: onError)
 
