@@ -32,8 +32,8 @@ class ViewController: UIViewController {
 
     private func addEventToNativeCalendar(_ event: EventModel, completion: OnEmptyAction? = nil) {
 
-        /// event:  .fromModal(someDefaultEvent) - here you you will see modal screen where you will be able to create or edit event
-        /// event:  .easy(someDefaultEvent) - here you will add an event to the calendar immediately
+        /// event:  .fromModal(event) - here you you will see modal screen where you will be able to create or edit event
+        /// event:  .easy(event) - here you will add an event to the calendar immediately
 
         calendarManager.add(
             event: .fromModal(event),
