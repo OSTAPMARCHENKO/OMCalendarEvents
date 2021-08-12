@@ -7,7 +7,7 @@
 
 import UIKit
 
-open enum CalendarType {
+enum CalendarType {
 
     enum Constants {
         static let currentUserCalendar = "primary"
