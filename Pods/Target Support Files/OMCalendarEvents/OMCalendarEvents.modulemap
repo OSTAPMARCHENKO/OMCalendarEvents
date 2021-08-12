@@ -1,0 +1,6 @@
+framework module OMCalendarEvents {
+  umbrella header "OMCalendarEvents-umbrella.h"
+
+  export *
+  module * { export * }
+}
