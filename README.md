@@ -1,5 +1,4 @@
-![Screenshot](calendar_icon.png)
-
+![](Images/calendar_icon.jpg)
 # OMCalendarEvents
 
 OMCalendarEvents is a Swift library for event managing in Google and IOS calendars.
@@ -27,7 +26,7 @@ check examples of how easy you can add events to IOS and GOOGLE calendars
 ```
 
 ## Google integration
-If you don't know how to integrate Google calendar in your app, you can check "GoogleIntegration.rtf" file inside the project
+If you don't know how to integrate Google calendar in your app, you can check "GoogleIntegration.rtf" file inside the library
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
