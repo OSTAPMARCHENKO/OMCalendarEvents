@@ -19,7 +19,7 @@ public class EventsCalendarManager {
     var onError: EventsManagerError?
     var onSuccess: EventsManagerEmptyCompletion?
 
-    public static let shared: EventsCalendarManager = EventsCalendarManager()
+    static let shared: EventsCalendarManager = EventsCalendarManager()
 
     // MARK: Properties(Private)
 
@@ -39,7 +39,7 @@ public class EventsCalendarManager {
     /// by default manager will show modal screen
     /// add event to eventKit(native calendar)
 
-    public func addEvent(
+    func addEvent(
         _ event: EventAddMethod = .fromModal(),
         to calendar: CalendarType = .native,
         onSuccess: @escaping EventsManagerEmptyCompletion,

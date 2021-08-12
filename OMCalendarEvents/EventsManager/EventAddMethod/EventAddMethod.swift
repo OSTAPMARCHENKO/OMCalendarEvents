@@ -9,5 +9,5 @@ enum EventAddMethod {
     case easy(event: EventModel)
 
     /// fromModal -  available ONLY for native
-    case fromModal(event: EventModel? = nil)
+    case fromModal(event: EventModel?)
 }
