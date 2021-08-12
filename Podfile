@@ -2,6 +2,7 @@
 platform :ios, '12.0'
 
 inhibit_all_warnings!
+use_modular_headers!
 
 target 'OMCalendarEvents' do
   use_frameworks!
@@ -9,7 +10,7 @@ target 'OMCalendarEvents' do
   pod 'GoogleSignIn', '~> 5.0'
 
   target 'OMExample' do
-#    pod 'OMCalendarEvents'
+    pod 'OMCalendarEvents'
   end
 end
 
