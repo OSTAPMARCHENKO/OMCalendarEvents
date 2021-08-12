@@ -21,14 +21,10 @@ PODS:
   - GTMSessionFetcher/Core (1.6.1)
   - GTMSessionFetcher/Full (1.6.1):
     - GTMSessionFetcher/Core (= 1.6.1)
-  - OMCalendarEvents (0.0.2):
-    - GoogleAPIClientForREST/Calendar
-    - GoogleSignIn (~> 5.0)
 
 DEPENDENCIES:
   - GoogleAPIClientForREST/Calendar
   - GoogleSignIn (~> 5.0)
-  - OMCalendarEvents
 
 SPEC REPOS:
   trunk:
@@ -37,7 +33,6 @@ SPEC REPOS:
     - GoogleSignIn
     - GTMAppAuth
     - GTMSessionFetcher
-    - OMCalendarEvents
 
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
@@ -45,8 +40,7 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
-  OMCalendarEvents: dd3f7ec732df925b88e1a871069e00e379940973
 
-PODFILE CHECKSUM: 151a2c869ff8c90a3a8ba05802f8c9fdb3d0335e
+PODFILE CHECKSUM: 758496e3a592940cafee7f6757708ae9273d9fc6
 
 COCOAPODS: 1.10.2

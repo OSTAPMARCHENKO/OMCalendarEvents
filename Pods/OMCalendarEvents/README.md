@@ -1,2 +1,0 @@
-# OMCalendarEvents
-Manage events

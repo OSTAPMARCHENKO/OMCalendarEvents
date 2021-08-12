@@ -6,13 +6,13 @@
 //
 
 import UIKit
-import OMCalendarEvents
+//import OMCalendarEvents
 
 class ViewController: UIViewController {
 
-    private lazy var eventmanager: OMCalendarEvents = {
-        OMCalendarEvents()
-    }()
+//    private lazy var eventmanager: OMCalendarEvents = {
+//        OMCalendarEvents()
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()

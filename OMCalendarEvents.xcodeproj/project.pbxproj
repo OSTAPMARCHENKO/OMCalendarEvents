@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17193F05B7796353F3A3FDE9 /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F52B92D4E4832C80E03560D /* Pods_OMCalendarEvents_OMExample.framework */; };
-		3184A2B8FBAC4CAAF041AE28 /* Pods_OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4EA258247F58F20DA73624 /* Pods_OMCalendarEvents.framework */; };
+		3B8B1336E581440DD54BEB45 /* Pods_OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D904A13282BA5ABF99A572 /* Pods_OMCalendarEvents.framework */; };
+		3D0990102A293F0EF6551157 /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755A45BA6FDC8ED412E99C0B /* Pods_OMCalendarEvents_OMExample.framework */; };
 		8401D08D26C475F20048FBFF /* OMCalendarEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = 8401D08B26C475F20048FBFF /* OMCalendarEvents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8401D09F26C476A80048FBFF /* EventAddMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D09526C476A80048FBFF /* EventAddMethod.swift */; };
 		8401D0A026C476A80048FBFF /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D09626C476A80048FBFF /* EventManager.swift */; };
@@ -26,9 +26,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		000ACE2D6B325AA287D4831A /* Pods-OMCalendarEvents-OMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents-OMExample.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents-OMExample/Pods-OMCalendarEvents-OMExample.release.xcconfig"; sourceTree = "<group>"; };
-		0F52B92D4E4832C80E03560D /* Pods_OMCalendarEvents_OMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents_OMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C4EA258247F58F20DA73624 /* Pods_OMCalendarEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4916C3D5776FC196129FD008 /* Pods-OMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMExample.release.xcconfig"; path = "Target Support Files/Pods-OMExample/Pods-OMExample.release.xcconfig"; sourceTree = "<group>"; };
+		50DEA820418EBCC6CC6754A2 /* Pods-OMCalendarEvents-OMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents-OMExample.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents-OMExample/Pods-OMCalendarEvents-OMExample.debug.xcconfig"; sourceTree = "<group>"; };
+		6A0753300E4B24A8A92C7329 /* Pods-OMCalendarEvents-OMExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents-OMExample.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents-OMExample/Pods-OMCalendarEvents-OMExample.release.xcconfig"; sourceTree = "<group>"; };
+		755A45BA6FDC8ED412E99C0B /* Pods_OMCalendarEvents_OMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents_OMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D904A13282BA5ABF99A572 /* Pods_OMCalendarEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8401D08826C475F20048FBFF /* OMCalendarEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OMCalendarEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8401D08B26C475F20048FBFF /* OMCalendarEvents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMCalendarEvents.h; sourceTree = "<group>"; };
 		8401D08C26C475F20048FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,9 +49,9 @@
 		8401D0B526C476EE0048FBFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8401D0B826C476EE0048FBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8401D0BA26C476EE0048FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84A63CECCAAAC7F053614E69 /* Pods-OMCalendarEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.release.xcconfig"; sourceTree = "<group>"; };
-		DEAB905E947863808FF71929 /* Pods-OMCalendarEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.debug.xcconfig"; sourceTree = "<group>"; };
-		FC1A7C4041055543737B6732 /* Pods-OMCalendarEvents-OMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents-OMExample.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents-OMExample/Pods-OMCalendarEvents-OMExample.debug.xcconfig"; sourceTree = "<group>"; };
+		B7610C2EAB5FB18AC4C4C974 /* Pods-OMCalendarEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		CAB67EC30CD139BB541ECAD8 /* Pods-OMCalendarEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.release.xcconfig"; sourceTree = "<group>"; };
+		EC8E5CB743A9CE87D137716F /* Pods-OMExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMExample.debug.xcconfig"; path = "Target Support Files/Pods-OMExample/Pods-OMExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3184A2B8FBAC4CAAF041AE28 /* Pods_OMCalendarEvents.framework in Frameworks */,
+				3B8B1336E581440DD54BEB45 /* Pods_OMCalendarEvents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,18 +67,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17193F05B7796353F3A3FDE9 /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */,
+				3D0990102A293F0EF6551157 /* Pods_OMCalendarEvents_OMExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01772E941C47112F2E7E3F8B /* Frameworks */ = {
+		2A7097ED2F0DFB24BF0B6D83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C4EA258247F58F20DA73624 /* Pods_OMCalendarEvents.framework */,
-				0F52B92D4E4832C80E03560D /* Pods_OMCalendarEvents_OMExample.framework */,
+				80D904A13282BA5ABF99A572 /* Pods_OMCalendarEvents.framework */,
+				755A45BA6FDC8ED412E99C0B /* Pods_OMCalendarEvents_OMExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,7 +90,7 @@
 				8401D0AB26C476ED0048FBFF /* OMExample */,
 				8401D08926C475F20048FBFF /* Products */,
 				99E12D76C422E66CD08A6096 /* Pods */,
-				01772E941C47112F2E7E3F8B /* Frameworks */,
+				2A7097ED2F0DFB24BF0B6D83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,10 +176,12 @@
 		99E12D76C422E66CD08A6096 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DEAB905E947863808FF71929 /* Pods-OMCalendarEvents.debug.xcconfig */,
-				84A63CECCAAAC7F053614E69 /* Pods-OMCalendarEvents.release.xcconfig */,
-				FC1A7C4041055543737B6732 /* Pods-OMCalendarEvents-OMExample.debug.xcconfig */,
-				000ACE2D6B325AA287D4831A /* Pods-OMCalendarEvents-OMExample.release.xcconfig */,
+				B7610C2EAB5FB18AC4C4C974 /* Pods-OMCalendarEvents.debug.xcconfig */,
+				CAB67EC30CD139BB541ECAD8 /* Pods-OMCalendarEvents.release.xcconfig */,
+				EC8E5CB743A9CE87D137716F /* Pods-OMExample.debug.xcconfig */,
+				4916C3D5776FC196129FD008 /* Pods-OMExample.release.xcconfig */,
+				50DEA820418EBCC6CC6754A2 /* Pods-OMCalendarEvents-OMExample.debug.xcconfig */,
+				6A0753300E4B24A8A92C7329 /* Pods-OMCalendarEvents-OMExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -200,12 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8401D09026C475F20048FBFF /* Build configuration list for PBXNativeTarget "OMCalendarEvents" */;
 			buildPhases = (
-				8D12E7B8D1F9A61054BD6CD8 /* [CP] Check Pods Manifest.lock */,
+				315C411C1B8935005340E091 /* [CP] Check Pods Manifest.lock */,
 				8401D08326C475F20048FBFF /* Headers */,
 				8401D08426C475F20048FBFF /* Sources */,
 				8401D08526C475F20048FBFF /* Frameworks */,
 				8401D08626C475F20048FBFF /* Resources */,
-				5539F3894A6C6ABED579DD1D /* [CP] Copy Pods Resources */,
+				4208BE104C57BB988AEA75BE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,12 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8401D0BB26C476EE0048FBFF /* Build configuration list for PBXNativeTarget "OMExample" */;
 			buildPhases = (
-				B40105437E8380AA1E2F4B23 /* [CP] Check Pods Manifest.lock */,
+				43AD9FD22532546782E0D1AD /* [CP] Check Pods Manifest.lock */,
 				8401D0A626C476ED0048FBFF /* Sources */,
 				8401D0A726C476ED0048FBFF /* Frameworks */,
 				8401D0A826C476ED0048FBFF /* Resources */,
-				C6460C3430341011714E514F /* [CP] Embed Pods Frameworks */,
-				40662D0D6A74F788015B4690 /* [CP] Copy Pods Resources */,
+				BF06E46AF3D2C0E8F4C30028 /* [CP] Embed Pods Frameworks */,
+				20CFD71BD3D9522C2E06DE67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,7 +297,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40662D0D6A74F788015B4690 /* [CP] Copy Pods Resources */ = {
+		20CFD71BD3D9522C2E06DE67 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -310,24 +314,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents-OMExample/Pods-OMCalendarEvents-OMExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5539F3894A6C6ABED579DD1D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D12E7B8D1F9A61054BD6CD8 /* [CP] Check Pods Manifest.lock */ = {
+		315C411C1B8935005340E091 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,7 +336,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B40105437E8380AA1E2F4B23 /* [CP] Check Pods Manifest.lock */ = {
+		4208BE104C57BB988AEA75BE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43AD9FD22532546782E0D1AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,7 +375,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C6460C3430341011714E514F /* [CP] Embed Pods Frameworks */ = {
+		BF06E46AF3D2C0E8F4C30028 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -561,7 +565,7 @@
 		};
 		8401D09126C475F20048FBFF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEAB905E947863808FF71929 /* Pods-OMCalendarEvents.debug.xcconfig */;
+			baseConfigurationReference = B7610C2EAB5FB18AC4C4C974 /* Pods-OMCalendarEvents.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -586,7 +590,7 @@
 		};
 		8401D09226C475F20048FBFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84A63CECCAAAC7F053614E69 /* Pods-OMCalendarEvents.release.xcconfig */;
+			baseConfigurationReference = CAB67EC30CD139BB541ECAD8 /* Pods-OMCalendarEvents.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -611,7 +615,7 @@
 		};
 		8401D0BC26C476EE0048FBFF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC1A7C4041055543737B6732 /* Pods-OMCalendarEvents-OMExample.debug.xcconfig */;
+			baseConfigurationReference = 50DEA820418EBCC6CC6754A2 /* Pods-OMCalendarEvents-OMExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -631,7 +635,7 @@
 		};
 		8401D0BD26C476EE0048FBFF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 000ACE2D6B325AA287D4831A /* Pods-OMCalendarEvents-OMExample.release.xcconfig */;
+			baseConfigurationReference = 6A0753300E4B24A8A92C7329 /* Pods-OMCalendarEvents-OMExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
