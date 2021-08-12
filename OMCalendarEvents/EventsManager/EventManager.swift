@@ -40,7 +40,7 @@ public class EventsCalendarManager {
     /// add event to eventKit(native calendar)
 
     public func add(
-        event: EventAddMethod = .fromModal(),
+        event: EventAddMethod,
         to calendar: CalendarType = .native,
         onSuccess: @escaping EventsManagerEmptyCompletion,
         onError: EventsManagerError?
