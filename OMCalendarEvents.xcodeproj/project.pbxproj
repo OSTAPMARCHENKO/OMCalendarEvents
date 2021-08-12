@@ -17,7 +17,6 @@
 		8401D0A426C476A80048FBFF /* GoogleCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D09C26C476A80048FBFF /* GoogleCalendarManager.swift */; };
 		8401D0A526C476A80048FBFF /* EventManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D09E26C476A80048FBFF /* EventManagerError.swift */; };
 		8401D0AD26C476ED0048FBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D0AC26C476ED0048FBFF /* AppDelegate.swift */; };
-		8401D0AF26C476ED0048FBFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D0AE26C476ED0048FBFF /* SceneDelegate.swift */; };
 		8401D0B126C476ED0048FBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D0B026C476ED0048FBFF /* ViewController.swift */; };
 		8401D0B426C476ED0048FBFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B226C476ED0048FBFF /* Main.storyboard */; };
 		8401D0B626C476EE0048FBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8401D0B526C476EE0048FBFF /* Assets.xcassets */; };
@@ -42,7 +41,6 @@
 		8401D09E26C476A80048FBFF /* EventManagerError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManagerError.swift; sourceTree = "<group>"; };
 		8401D0AA26C476ED0048FBFF /* OMExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8401D0AC26C476ED0048FBFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8401D0AE26C476ED0048FBFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8401D0B026C476ED0048FBFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8401D0B326C476ED0048FBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8401D0B526C476EE0048FBFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				8401D0AC26C476ED0048FBFF /* AppDelegate.swift */,
-				8401D0AE26C476ED0048FBFF /* SceneDelegate.swift */,
 				8401D0B026C476ED0048FBFF /* ViewController.swift */,
 				8401D0B226C476ED0048FBFF /* Main.storyboard */,
 				8401D0B526C476EE0048FBFF /* Assets.xcassets */,
@@ -415,7 +412,6 @@
 			files = (
 				8401D0B126C476ED0048FBFF /* ViewController.swift in Sources */,
 				8401D0AD26C476ED0048FBFF /* AppDelegate.swift in Sources */,
-				8401D0AF26C476ED0048FBFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
