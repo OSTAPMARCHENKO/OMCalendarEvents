@@ -6,8 +6,8 @@
 //
 
 enum EventAddMethod {
-    case easy(event: EventModel)
+    case easy(_ event: EventModel)
 
     /// fromModal -  available ONLY for native
-    case fromModal(event: EventModel? = nil)
+    case fromModal(_ event: EventModel? = nil)
 }
