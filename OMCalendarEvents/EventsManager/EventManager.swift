@@ -39,9 +39,9 @@ public class EventsCalendarManager {
     /// by default manager will show modal screen
     /// add event to eventKit(native calendar)
 
-    public func add(
+    func add(
         event: EventAddMethod,
-        to calendar: CalendarType = .native,
+        to calendar: CalendarType,
         onSuccess: @escaping EventsManagerEmptyCompletion,
         onError: EventsManagerError?
     ) {
