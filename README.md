@@ -1,3 +1,5 @@
+![Screenshot](calendar_icon.png)
+
 # OMCalendarEvents
 
 OMCalendarEvents is a Swift library for event managing in Google and IOS calendars.
