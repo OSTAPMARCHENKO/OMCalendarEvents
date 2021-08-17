@@ -15,7 +15,7 @@ struct EventModel: Codable {
     var description: String?
     var id: String?
     var location: String?
-    var url: URL?
+    var url: URL? /// only for native
 
     public
     init(

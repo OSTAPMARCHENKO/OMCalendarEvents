@@ -23,7 +23,8 @@ class ViewController: UIViewController {
             start: DateFormatters.generalTimeFormatter.date(from: "2021-08-17 12:01:00") ?? Date(),
             end: DateFormatters.generalTimeFormatter.date(from: "2021-08-17 13:03:00") ?? Date(),
             title: "Event test title",
-            description: "Test event description" /// optional
+            description: "Test event description", /// optional
+            url: URL(string: "https://github.com/OSTAPMARCHENKO/OMCalendarEvents") /// optional
         )
     }()
 

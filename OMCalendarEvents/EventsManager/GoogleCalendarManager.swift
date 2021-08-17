@@ -184,9 +184,7 @@ class GoogleCalendarManager {
         }
     }
 
-    // MARK: Methods(Private)
-
-    internal
+    private
     func removeEvent(
         _ event: String?,
         onSuccess: @escaping EventsManagerTextCompletion,
@@ -267,7 +265,8 @@ class GoogleCalendarManager {
 
         newEvent.start = buildDate(form: event.startDate)
         newEvent.end = buildDate(form: event.endDate)
-        newEvent.reminders?.useDefault = 7
+        newEvent.location = event.location
+
 
         /// event title
         newEvent.summary = event.title
