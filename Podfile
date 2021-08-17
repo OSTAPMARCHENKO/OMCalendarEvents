@@ -10,7 +10,7 @@ target 'OMCalendarEvents' do
   pod 'SwiftLint'
 
   target 'OMExample' do
-    pod 'OMCalendarEvents', '~> 0.0.7'
+    pod 'OMCalendarEvents'
     pod 'Firebase/Analytics'
   end
 end

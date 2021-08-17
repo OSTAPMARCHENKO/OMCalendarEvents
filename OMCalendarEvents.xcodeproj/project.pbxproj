@@ -27,8 +27,6 @@
 		8401D18826C5B2270048FBFF /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D18726C5B2270048FBFF /* Completions.swift */; };
 		8499F73226CBB3BF006D85A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8499F73126CBB3BF006D85A8 /* GoogleService-Info.plist */; };
 		8499F73526CBC1C8006D85A8 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499F73426CBC1C8006D85A8 /* DateFormatters.swift */; };
-		8499F73726CBDE5B006D85A8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8499F73626CBDE5B006D85A8 /* .swiftlint.yml */; };
-		8499F73826CBDE5B006D85A8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8499F73626CBDE5B006D85A8 /* .swiftlint.yml */; };
 		FB998E4F9B47C3BB90C79D70 /* Pods_OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202AF9EC7C2ACA68899350E8 /* Pods_OMCalendarEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +79,7 @@
 		8401D18726C5B2270048FBFF /* Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
 		8499F73126CBB3BF006D85A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8499F73426CBC1C8006D85A8 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
-		8499F73626CBDE5B006D85A8 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		8499F73D26CBEF51006D85A8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BE7C63E1F9D2DD494C0AEFC0 /* Pods-OMCalendarEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.release.xcconfig"; sourceTree = "<group>"; };
 		CB2ACFB27A3A25DCCC06AF5E /* Pods-OMCalendarEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		E618EA36A31A0BB6F19A8685 /* Pods_OMCalendarEvents_OMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents_OMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +109,7 @@
 		8401D07E26C475F20048FBFF = {
 			isa = PBXGroup;
 			children = (
-				8499F73626CBDE5B006D85A8 /* .swiftlint.yml */,
+				8499F73D26CBEF51006D85A8 /* .swiftlint.yml */,
 				8401D08A26C475F20048FBFF /* OMCalendarEvents */,
 				8401D0AB26C476ED0048FBFF /* OMExample */,
 				8401D08926C475F20048FBFF /* Products */,
@@ -330,7 +328,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8499F73726CBDE5B006D85A8 /* .swiftlint.yml in Resources */,
 				8401D12526C557290048FBFF /* GoogleIntegration.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,7 +336,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8499F73826CBDE5B006D85A8 /* .swiftlint.yml in Resources */,
 				8401D0B926C476EE0048FBFF /* LaunchScreen.storyboard in Resources */,
 				8499F73226CBB3BF006D85A8 /* GoogleService-Info.plist in Resources */,
 				8401D0B626C476EE0048FBFF /* Assets.xcassets in Resources */,

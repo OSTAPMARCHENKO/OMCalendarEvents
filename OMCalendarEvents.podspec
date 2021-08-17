@@ -5,7 +5,7 @@ s.ios.deployment_target = '12.0'
 s.name = "OMCalendarEvents"
 s.summary = "Manage your events in IOS and Google calendars"
 
-s.version = "0.1.1"
+s.version = "0.1.2"
 
 s.license = { :type => "MIT", :file => "LICENSE" }
 

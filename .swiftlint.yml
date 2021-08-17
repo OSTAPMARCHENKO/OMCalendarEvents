@@ -1,0 +1,524 @@
+disabled_rules:
+    - anyobject_protocol
+    - array_init
+    - discouraged_optional_boolean
+    - discouraged_optional_collection
+    - explicit_acl
+    - explicit_top_level_acl
+    - generic_type_name
+    - inclusive_language
+    - missing_docs
+    - nesting
+    - nslocalizedstring_key
+    - nslocalizedstring_require_bundle
+    - nsobject_prefer_isequal
+    - object_literal
+    - orphaned_doc_comment
+    - pattern_matching_keywords
+    - prefixed_toplevel_constant
+    - private_over_fileprivate
+    - prohibited_interface_builder
+    - prohibited_super_call
+    - redundant_type_annotation
+    - redundant_void_return
+    - required_deinit
+    - required_enum_case
+    - sorted_imports
+    - statement_position
+    - trailing_closure
+    - trailing_whitespace
+opt_in_rules: # some rules are only opt-in
+    - discarded_notification_center_observer
+    - enum_case_associated_values_count
+    - function_default_parameter_at_end
+    - indentation_width
+    - legacy_multiple
+#    - legacy_objc_type
+    - legacy_random
+    - override_in_extension
+    - private_outlet
+    - private_action
+    - unavailable_function
+    - unowned_variable_capture
+    - vertical_whitespace_between_cases
+    - yoda_condition
+    - attributes
+    - balanced_xctest_lifecycle
+    - capture_variable
+    - closure_body_length
+    - closure_end_indentation
+    - closure_spacing
+    - collection_alignment
+    - conditional_returns_on_newline
+    - contains_over_filter_count
+    - contains_over_filter_is_empty
+    - contains_over_first_not_nil
+    - contains_over_range_nil_comparison
+    - convenience_type
+    - discouraged_assert
+    - discouraged_object_literal
+    - empty_collection_literal
+    - empty_count
+    - empty_string
+    - empty_xctest_method
+    - expiring_todo
+    - explicit_init
+    - explicit_self
+    - extension_access_modifier
+    - fallthrough
+    - fatal_error_message
+    - file_name_no_space
+    - file_types_order
+    - first_where
+    - force_unwrapping
+    - ibinspectable_in_extension
+    - identical_operands
+    - unused_declaration
+    - implicit_return
+    - implicitly_unwrapped_optional
+    - joined_default_parameter
+    - last_where
+    - let_var_whitespace
+    - literal_expression_end_indentation
+    - lower_acl_than_parent
+    - modifier_order
+    - multiline_arguments
+    - multiline_arguments_brackets
+    - multiline_function_chains
+    - multiline_literal_brackets
+    - multiline_parameters
+    - multiline_parameters_brackets
+    - nimble_operator
+    - number_separator
+    - operator_usage_whitespace
+    - optional_enum_case_matching
+    - overridden_super_call
+    - prefer_nimble
+    - prefer_self_type_over_type_of_self
+    - prefer_zero_over_explicit_init
+    - private_subject
+    - quick_discouraged_call
+    - quick_discouraged_focused_test
+    - quick_discouraged_pending_test
+    - raw_value_for_camel_cased_codable_enum
+    - reduce_into
+    - redundant_nil_coalescing
+    - single_test_class
+    - sorted_first_last
+    - static_operator
+    - strict_fileprivate
+    - strong_iboutlet
+    - switch_case_alignment
+    - switch_case_on_newline
+    - test_case_accessibility
+    - toggle_bool
+    - unneeded_parentheses_in_closure_argument
+    - untyped_error_in_catch
+    - unused_import
+    - vertical_parameter_alignment_on_call
+    - vertical_whitespace_between_cases
+    - vertical_whitespace_closing_braces
+    - xct_specific_matcher
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Carthage
+    - Pods
+    - Source/ExcludedFolder
+    - Source/ExcludedFile.swift
+    - Source/*/ExcludedFile.swift # Exclude files with a wildcard
+    - BestOfU/General/Extensions
+    - BestOfU/SupportingFiles/Libraries
+    - BestOfU/PresentationLayer/General/Core/GlobalViews/CustomChartView
+    - BestOfU/PresentationLayer/General/Core/GlobalViews/CircleChartView
+    - BestOfU/PresentationLayer/Stories/StartQuestions/Screens/HowItWorks/Views
+    - BestOfU/PresentationLayer/Stories/Dashboard/Screens/SleepDetails/Views/StressDetailsChartView.swift
+discouraged_direct_init:
+    types: ["Bundle", "Bundle.init", "UIDevice", "UIDevice.init"]
+file_length:
+    warning: 700
+    error: 1000
+function_body_length:
+    warning: 150
+    error: 200
+function_parameter_count:
+    warning: 5
+    ignores_default_parameters: true
+indentation_width:
+    indentation_width: 4
+    include_comments: true
+    severity: warning
+large_tuple:
+    warning: 2
+line_length:
+    warning: 230
+    error: 250
+shorthand_operator:
+    warning
+attributes:
+    always_on_same_line: ["@IBAction", "@NSManaged"]
+    always_on_line_above: []
+    severity: error
+balanced_xctest_lifecycle:
+    error
+block_based_kvo:
+    error
+capture_variable:
+    error
+class_delegate_protocol:
+    error
+closing_brace:
+    error
+closure_body_length:
+    warning: 20
+    error: 100
+closure_end_indentation:
+    error
+closure_parameter_position:
+    error
+closure_spacing:
+    error
+collection_alignment:
+    align_colons: false
+    severity: error
+colon:
+    flexible_right_spacing: false
+    apply_to_dictionaries: true
+    severity: error
+comma:
+    error
+comment_spacing:
+    error
+compiler_protocol_init:
+    error
+computed_accessors_order:
+    order: get_set
+    severity: error
+conditional_returns_on_newline:
+    if_only: false
+    severity: error
+contains_over_filter_count:
+    error
+contains_over_filter_is_empty:
+    error
+contains_over_first_not_nil:
+    error
+contains_over_range_nil_comparison:
+    error
+control_statement:
+    error
+convenience_type:
+    error
+cyclomatic_complexity:
+    error: 20
+deployment_target:
+    iOS_deployment_target: 7.0
+    macOS_deployment_target: 10.9
+    watchOS_deployment_target: 1.0
+    tvOS_deployment_target: 9.0
+    severity: error
+discouraged_assert:
+    error
+discouraged_object_literal:
+    image_literal: true
+    color_literal: true
+    severity: error
+duplicate_imports:
+    error
+empty_collection_literal:
+    error
+empty_count:
+    only_after_dot: false
+    severity: error
+empty_enum_arguments:
+    error
+empty_parameters:
+    error
+empty_parentheses_with_trailing_closure:
+    error
+empty_string:
+    error
+empty_xctest_method:
+    error
+expiring_todo:
+    error: approaching_expiry_severity
+explicit_init:
+    error
+explicit_self:
+    error
+extension_access_modifier:
+    error
+fallthrough:
+    error
+fatal_error_message:
+    error
+file_name_no_space:
+    excluded: []
+    severity: error
+file_types_order:
+    order: [[SwiftLintFramework.FileType.supportingType], [SwiftLintFramework.FileType.mainType], [SwiftLintFramework.FileType.extension], [SwiftLintFramework.FileType.previewProvider]]
+    severity: error
+first_where:
+    error
+force_unwrapping:
+    error
+ibinspectable_in_extension:
+    error
+identical_operands:
+    error
+implicit_getter:
+    error
+inert_defer:
+    error
+is_disjoint:
+    error
+leading_whitespace:
+    error
+mark:
+    error
+multiple_closures_with_trailing_closure:
+    error
+no_fallthrough_only:
+    error
+no_space_in_method_call:
+    error
+opening_brace:
+    allowMultilineFunc: false
+    severity: error
+operator_whitespace:
+    error
+private_unit_test:
+    error: XCTestCase
+protocol_property_accessors_order:
+    error
+reduce_boolean:
+    error
+redundant_discardable_let:
+    error
+redundant_objc_attribute:
+    error
+redundant_optional_initialization:
+    error
+redundant_set_access_control:
+    error
+redundant_string_enum_value:
+    error
+return_arrow_whitespace:
+    error
+syntactic_sugar:
+    error
+trailing_comma:
+    mandatory_comma: false
+    severity: error
+trailing_semicolon:
+    error
+type_body_length:
+    warning: 300
+    error: 400
+unneeded_break_in_switch:
+    error
+unused_capture_list:
+    error
+unused_closure_parameter:
+    error
+unused_control_flow_label:
+    error
+unused_enumerated:
+    error
+unused_optional_binding:
+    gnore_optional_try: false
+    severity: error
+unused_setter_value:
+    error
+valid_ibinspectable:
+    error
+vertical_parameter_alignment:
+    error
+void_return:
+    error
+weak_delegate:
+    error
+xctfail_message:
+    error
+implicit_return:
+    included: [function, closure, getter]
+    severity: error
+implicitly_unwrapped_optional:
+    error: allExceptIBOutlets
+identifier_name:
+    max_length:
+        warning: 40
+        error: 60
+    excluded:
+    - id
+joined_default_parameter:
+    error
+last_where:
+    error
+let_var_whitespace:
+    error
+literal_expression_end_indentation:
+    error
+lower_acl_than_parent:
+    error
+modifier_order:
+    preferred_modifier_order: [override, acl, setterACL, dynamic, mutators, lazy, final, required, convenience, typeMethods, owned]
+    severity: error
+multiline_arguments:
+    first_argument_location: any_line
+    only_enforce_after_first_closure_on_first_line: false
+    severity: error
+multiline_arguments_brackets:
+    error
+multiline_function_chains:
+    error
+multiline_literal_brackets:
+    error
+multiline_parameters_brackets:
+    error
+number_separator:
+    minimum_length: 0
+operator_usage_whitespace:
+    lines_look_around: 2
+    skip_aligned_constants: true
+    severity: error
+optional_enum_case_matching:
+    error
+overridden_super_call:
+    excluded: []
+    included: ["*"]
+    severity: error
+prefer_nimble:
+    error
+prefer_self_type_over_type_of_self:
+    error
+prefer_zero_over_explicit_init:
+    error
+private_subject:
+    error
+quick_discouraged_call:
+    error
+quick_discouraged_focused_test:
+    error
+quick_discouraged_pending_test:
+    error
+raw_value_for_camel_cased_codable_enum:
+    error
+redundant_nil_coalescing:
+    error
+single_test_class:
+    error
+sorted_first_last:
+    error
+static_operator:
+    error
+strict_fileprivate:
+    error
+strong_iboutlet:
+    error
+switch_case_alignment:
+    indented_cases: false
+    severity: error
+switch_case_on_newline:
+    error
+test_case_accessibility:
+    allowed_prefixes: [[]]
+    severity: error
+toggle_bool:
+    error
+unneeded_parentheses_in_closure_argument:
+    error
+untyped_error_in_catch:
+    error
+unused_import:
+    require_explicit_imports: false
+    allowed_transitive_imports: []
+    always_keep_imports: []
+    severity: error
+vertical_parameter_alignment_on_call:
+    error
+vertical_whitespace_between_cases:
+    error
+vertical_whitespace_closing_braces:
+    error
+xct_specific_matcher:
+    error
+type_contents_order:
+    order:
+        - case
+        - type_alias
+        - associated_type
+        - subtype
+        - type_property
+        - instance_property
+        - ib_inspectable
+        - subscript
+        - initializer
+        - deinitializer
+        - view_life_cycle_method
+        - type_method
+        - other_method
+custom_rules:
+    print_using:
+        regex: 'print'
+        message: "Print decrease performance of the app"
+    uikit_in_respository:
+        included: ".*Repository.swift"
+        name: "UIKit in Repository"
+        regex: 'import UIKit'
+        message: "UIKit should not be imported in Repository files"
+        severity: error
+    uikit_in_request:
+        included: ".*Request.swift"
+        name: "UIKit in Request"
+        regex: 'import UIKit'
+        message: "UIKit should not be imported in Request files"
+        severity: error
+    new_line_after_bracket:
+        name: "Bracket style"
+        regex: '\n[^\n\{]*\}[^\n}]*\n(?!( *\n| *(\}|\)|\]|else [^\n]*\{)))[^\n]+'
+        message: "After closing bracket `}` should be empty line or another closing bracket"
+    new_line_after_super:
+        name: "Space after super method"
+        regex: 'super\.[^\n]+\)[^\n]*\r?\n(?!( *\r?\n| *\}))'
+        message: "After calling super method should be one empty line"
+        severity: warning
+    new_line_after_custom_property:
+        name: "Property style"
+        regex: '\n *[^\{\n ]+[^\{\n]*\n *[^\n]*(var|let) [^\n]+(\:|\=)[^\n]+\{'
+        message: "Property with custom implementation should have one empty line before it"
+        severity: warning
+    no_space_before_super:
+        name: "No space before super"
+        regex: 'override [^\n]+\{[^\n]*\r?\n( *\n)+ *super\.'
+        message: "There should not be empty line before super call"
+        severity: warning
+    present_optional_completion:
+        name: "Optional completion for present"
+        regex: 'present *\([^\n]+\, *animated *\: *(true|false) *\, *completion *\: *nil *\)'
+        message: "completion is optional parameter"
+        severity: warning
+    dismiss_optional_completion:
+        name: "Optional completion for dismiss"
+        regex: 'dismiss *\( *animated *\: *(true|false) *\, *completion *\: *nil *\)'
+        message: "completion is optional parameter"
+        severity: warning
+    one_line_array_style:
+        name: "One line array style"
+        regex: '(\[ +[^\n]*\]|\[[^\n]* +\])'
+        message: "No spaceces neede before and after brackets"
+        severity: warning
+    no_line_before_else:
+        name: "No line before else"
+        regex: '\}[^\n]*\n( *\n)+ *else[^\n]\{[^\n]*\n'
+        message: "`else` keyword should be in the next row after }"
+        severity: warning
+    single_line_closure_length:
+        name: "Single line closure length"
+        regex: '\{[^\n]{30,}\}'
+        message: "Lenght of a single line closure should not be too long. Make it not in single line"
+        severity: warning
+    single_cast_guard:
+        name: "Single cast guard"
+        regex: 'guard (let|var) =[^\n]\,( (let|var) =|[^\n]\n[^\n] (let|var) =)'
+        message: "Split into several guards with separate cast each for better readability"
+        severity: warning
+reporter: "xcode"

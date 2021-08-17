@@ -289,8 +289,6 @@ class GoogleCalendarManager {
     }
 }
 
-// TODO: - Update GoogleSDK to the latest version
-
 final class GoogleSignInService: NSObject, GIDSignInDelegate {
 
     typealias LoginCompletion = (Bool) -> Void
