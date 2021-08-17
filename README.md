@@ -17,7 +17,7 @@ pod 'OMCalendarEvents'
 
 ```swift
 
-check examples of how easy you can add events to IOS and GOOGLE calendars
+Check examples of how easy you can manage events in IOS and Google calendars
 
 ***
 0. Info.plist must contain an NSCalendarsUsageDescription
