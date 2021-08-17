@@ -25,6 +25,10 @@
 		8401D18226C57A330048FBFF /* OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8401D08826C475F20048FBFF /* OMCalendarEvents.framework */; };
 		8401D18326C57A330048FBFF /* OMCalendarEvents.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8401D08826C475F20048FBFF /* OMCalendarEvents.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8401D18826C5B2270048FBFF /* Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401D18726C5B2270048FBFF /* Completions.swift */; };
+		8499F73226CBB3BF006D85A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8499F73126CBB3BF006D85A8 /* GoogleService-Info.plist */; };
+		8499F73526CBC1C8006D85A8 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499F73426CBC1C8006D85A8 /* DateFormatters.swift */; };
+		8499F73726CBDE5B006D85A8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8499F73626CBDE5B006D85A8 /* .swiftlint.yml */; };
+		8499F73826CBDE5B006D85A8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 8499F73626CBDE5B006D85A8 /* .swiftlint.yml */; };
 		FB998E4F9B47C3BB90C79D70 /* Pods_OMCalendarEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202AF9EC7C2ACA68899350E8 /* Pods_OMCalendarEvents.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +79,9 @@
 		8401D0BA26C476EE0048FBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8401D12426C557290048FBFF /* GoogleIntegration.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = GoogleIntegration.rtf; sourceTree = "<group>"; };
 		8401D18726C5B2270048FBFF /* Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Completions.swift; sourceTree = "<group>"; };
+		8499F73126CBB3BF006D85A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8499F73426CBC1C8006D85A8 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		8499F73626CBDE5B006D85A8 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		BE7C63E1F9D2DD494C0AEFC0 /* Pods-OMCalendarEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.release.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.release.xcconfig"; sourceTree = "<group>"; };
 		CB2ACFB27A3A25DCCC06AF5E /* Pods-OMCalendarEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMCalendarEvents.debug.xcconfig"; path = "Target Support Files/Pods-OMCalendarEvents/Pods-OMCalendarEvents.debug.xcconfig"; sourceTree = "<group>"; };
 		E618EA36A31A0BB6F19A8685 /* Pods_OMCalendarEvents_OMExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMCalendarEvents_OMExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +111,7 @@
 		8401D07E26C475F20048FBFF = {
 			isa = PBXGroup;
 			children = (
+				8499F73626CBDE5B006D85A8 /* .swiftlint.yml */,
 				8401D08A26C475F20048FBFF /* OMCalendarEvents */,
 				8401D0AB26C476ED0048FBFF /* OMExample */,
 				8401D08926C475F20048FBFF /* Products */,
@@ -184,10 +192,12 @@
 			children = (
 				8401D0AC26C476ED0048FBFF /* AppDelegate.swift */,
 				8401D0B026C476ED0048FBFF /* ViewController.swift */,
+				8499F73126CBB3BF006D85A8 /* GoogleService-Info.plist */,
 				8401D0B226C476ED0048FBFF /* Main.storyboard */,
 				8401D0B526C476EE0048FBFF /* Assets.xcassets */,
 				8401D0B726C476EE0048FBFF /* LaunchScreen.storyboard */,
 				8401D0BA26C476EE0048FBFF /* Info.plist */,
+				8499F73426CBC1C8006D85A8 /* DateFormatters.swift */,
 			);
 			path = OMExample;
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 			buildConfigurationList = 8401D09026C475F20048FBFF /* Build configuration list for PBXNativeTarget "OMCalendarEvents" */;
 			buildPhases = (
 				5AFD725F4B72354337C33E37 /* [CP] Check Pods Manifest.lock */,
+				8499F73926CBDE7B006D85A8 /* SwiftLint */,
 				8401D08326C475F20048FBFF /* Headers */,
 				8401D08426C475F20048FBFF /* Sources */,
 				8401D08526C475F20048FBFF /* Frameworks */,
@@ -259,12 +270,14 @@
 			buildConfigurationList = 8401D0BB26C476EE0048FBFF /* Build configuration list for PBXNativeTarget "OMExample" */;
 			buildPhases = (
 				8020768DDFB384357A79A7F1 /* [CP] Check Pods Manifest.lock */,
+				8499F73A26CBDE89006D85A8 /* SwiftLint */,
 				8401D0A626C476ED0048FBFF /* Sources */,
 				8401D0A726C476ED0048FBFF /* Frameworks */,
 				8401D0A826C476ED0048FBFF /* Resources */,
 				CBF028AF6F642CFA290C3930 /* [CP] Embed Pods Frameworks */,
 				618349B109F33CCDC90C08A9 /* [CP] Copy Pods Resources */,
 				8401D18126C57A000048FBFF /* Embed Frameworks */,
+				8499F73326CBBAB9006D85A8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -317,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8499F73726CBDE5B006D85A8 /* .swiftlint.yml in Resources */,
 				8401D12526C557290048FBFF /* GoogleIntegration.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +339,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8499F73826CBDE5B006D85A8 /* .swiftlint.yml in Resources */,
 				8401D0B926C476EE0048FBFF /* LaunchScreen.storyboard in Resources */,
+				8499F73226CBB3BF006D85A8 /* GoogleService-Info.plist in Resources */,
 				8401D0B626C476EE0048FBFF /* Assets.xcassets in Resources */,
 				8401D0B426C476ED0048FBFF /* Main.storyboard in Resources */,
 			);
@@ -395,6 +411,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8499F73326CBBAB9006D85A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+		8499F73926CBDE7B006D85A8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		8499F73A26CBDE89006D85A8 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		95883C70A42BEB66437193FB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8499F73526CBC1C8006D85A8 /* DateFormatters.swift in Sources */,
 				8401D0B126C476ED0048FBFF /* ViewController.swift in Sources */,
 				8401D0AD26C476ED0048FBFF /* AppDelegate.swift in Sources */,
 			);
@@ -620,6 +691,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OMCalendarEvents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -645,6 +717,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OMCalendarEvents/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -667,6 +740,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C436FEC94;
 				INFOPLIST_FILE = OMExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -687,6 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4C436FEC94;
 				INFOPLIST_FILE = OMExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

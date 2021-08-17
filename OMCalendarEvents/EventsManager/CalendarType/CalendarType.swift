@@ -7,12 +7,14 @@
 
 import UIKit
 
-public enum CalendarType {
+public
+enum CalendarType {
 
-    public enum Constants {
+    public
+    enum Constants {
         public static let currentUserCalendar = "primary"
     }
 
     case native
-    case google(on: UIViewController, clientID: String, calendarID: String = Constants.currentUserCalendar)
+    case google(from: UIViewController, clientID: String, calendarID: String = Constants.currentUserCalendar)
 }

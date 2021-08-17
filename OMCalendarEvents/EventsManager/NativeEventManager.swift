@@ -6,7 +6,7 @@ import EventKitUI
 
 private extension EventModel {
     init(_ event: EKEvent) {
-        self.init(start: event.startDate, end: event.endDate, title: event.title, id: event.eventIdentifier, description: event.notes, url: nil)
+        self.init(start: event.startDate, end: event.endDate, title: event.title, id: event.eventIdentifier, description: event.notes)
     }
 }
 
@@ -15,11 +15,22 @@ class NativeEventManager: NSObject {
     private enum Constants {
 
         enum Error {
-            static let unknownError: String = "\n\n=== unknown error === \n\n"
-            static let predicateError: String = "\n\n=== Events list predicate error === \n\n"
-            static let notValidEvent: String = "\n\n=== Event not valid... === \n\n"
-            static let eventAlredyExist: String = "\n\n=== Event already exist === \n\n"
+            static let selfnil: String = "\nNativeEventManager == nil\n"
+            static let unknownError: String = "\nunknown error\n"
+            static let predicateError: String = "\nEvents list predicate error\n"
+            static let notValidEvent: String = "\nEvent not valid...\n"
+            static let eventAlredyExist: String = "\nEvent already exist\n"
+            static let removeEventError: String = "\nEvent remove error\n"
+            static let cantFindEvent: String = "\nCan't find event in calendar\n"
         }
+
+        enum Success {
+            static let eventRemoved: String = "\nIOS Calendar event removed\n"
+            static let eventAdded: String = "\nIOS Calendar event added\n"
+        }
+
+        static let minutesInYear: Int = 525_600
+        static let minutesInHour: Int = 60
     }
 
     // MARK: Completions
@@ -36,10 +47,12 @@ class NativeEventManager: NSObject {
 
     // MARK: Public(Methods)
 
-    public func addEvent(
+    internal
+    func addEvent(
         _ event: EventAddMethod,
-        onSuccess: @escaping EventsManagerEmptyCompletion,
-        onError: EventsManagerError?) {
+        onSuccess: @escaping EventsManagerTextCompletion,
+        onError: EventsManagerError?
+    ) {
 
         requestAuthorization(onSuccess: { [weak self] in
             switch event {
@@ -52,16 +65,18 @@ class NativeEventManager: NSObject {
                 }
             }
         },
+
         onError: { error in
             onError?(error)
         }
         )
     }
 
-    public func getAllEvents(
+    internal
+    func getAllEvents(
         from startDate: Date,
         to endDate: Date,
-        onSuccess: @escaping EventsManagerEventsCompletion,
+        onSuccess: @escaping AllNativeEventsCompletion,
         onError: @escaping EventsManagerError
     ) {
 
@@ -72,19 +87,21 @@ class NativeEventManager: NSObject {
             }
 
             let events = self?.eventStore.events(matching: predicate) ?? []
-            let mapped = events.map({ EventModel( $0 ) })
-
-            onSuccess(mapped)
+            onSuccess(events)
         },
+
         onError: { error in
             onError(error)
         }
         )
     }
 
-    public func eventExists(
+    /// check if event already added to the calendar
+
+    internal
+    func eventExists(
         _ newEvent: EventModel,
-        statusCompletion: @escaping (Bool) -> Void,
+        statusCompletion: @escaping EventsManagerStatusCompletion,
         onError: @escaping EventsManagerError
     ) {
         requestAuthorization(onSuccess: { [weak self] in
@@ -94,29 +111,82 @@ class NativeEventManager: NSObject {
                 onSuccess: { events in
 
                     let eventContains = events.contains { event in
-                            (event.title == newEvent.title
-                                && event.startDate == newEvent.startDate
-                                && event.endDate == newEvent.endDate)
+                        (event.title == newEvent.title
+                            && event.startDate == newEvent.startDate
+                            && event.endDate == newEvent.endDate)
 
-                                /// event can be edited by user so need to check ID also
-                                || event.id == newEvent.id
+                            /// event can be edited by user so need to check ID also
+                            || event.eventIdentifier == newEvent.id
                     }
 
                     statusCompletion(eventContains)
-
                 },
+
                 onError: onError
             )
         },
+
         onError: { error in
             onError(error)
         }
         )
     }
 
-    //MARK: - Authorization
+    /// by default event will be searched in range of 2 years
+    /// if you want change range, update 'inRange' param
 
-    public func requestAuthorization(
+    internal
+    func removeEvent(
+        _ event: EventModel,
+        inRange: (from: Date, to: Date)? = nil,
+        onSuccess: @escaping EventsManagerTextCompletion,
+        onError: @escaping EventsManagerError
+    ) {
+
+        requestAuthorization(
+            onSuccess: { [weak self] in
+
+                guard let self = self else {
+                    onError(.message(Constants.Error.unknownError))
+                    return
+                }
+
+                self.getAllEvents(
+                    from: inRange?.from ?? Date().adding(minutes: -Constants.minutesInYear),
+                    to: inRange?.to ?? Date().adding(minutes: Constants.minutesInYear),
+                    onSuccess: { allEvents in
+
+                        if let eventToRemove = allEvents.first(
+                            where: { $0.eventIdentifier == event.id || (
+                                $0.startDate == event.startDate
+                                    && $0.endDate == event.endDate
+                                    && $0.title == event.title
+                            )
+                            }
+                        ) {
+                            self.removeEvent(eventToRemove, onSuccess: onSuccess, onError: onError)
+                        }
+                        else {
+                            onError(.message(Constants.Error.cantFindEvent))
+                        }
+                    },
+
+                    onError: { error in
+                        onError(error)
+                    }
+                )
+            },
+
+            onError: { error in
+                onError(error)
+            }
+        )
+    }
+
+    // MARK: - Authorization
+
+    internal
+    func requestAuthorization(
         onSuccess: @escaping EventsManagerEmptyCompletion,
         onError: @escaping EventsManagerError
     ) {
@@ -125,8 +195,9 @@ class NativeEventManager: NSObject {
             onSuccess()
 
         case .notDetermined:
-            //Request access to the calendar
-            requestAccess { (accessGranted, error) in
+
+            // Request access to the calendar
+            requestAccess { accessGranted, error in
 
                 if let error = error {
                     onError(.error(error))
@@ -134,14 +205,15 @@ class NativeEventManager: NSObject {
                 else {
                     if accessGranted {
                         onSuccess()
-                    } else {
+                    }
+                    else {
                         onError(.accessStatus(accessGranted))
                     }
                 }
             }
 
-        case .denied,
-             .restricted:
+        case .denied, .restricted:
+
             onError(.authorizationStatus(authorizationStatus))
 
         @unknown default:
@@ -151,24 +223,11 @@ class NativeEventManager: NSObject {
 
     // MARK: Private(Methods)
 
-    private func removeEvent(
-        onSuccess: @escaping EventsManagerEmptyCompletion,
-        onError: @escaping EventsManagerError
+    private func requestAccess(
+        completion: @escaping EKEventStoreRequestAccessCompletionHandler
     ) {
-
-        requestAuthorization(onSuccess: {
-
-
-        },
-        onError: { error in
-            onError(error)
-        }
-        )
-    }
-
-    private func requestAccess(completion: @escaping EKEventStoreRequestAccessCompletionHandler) {
         DispatchQueue.main.async { [weak self] in
-            self?.eventStore.requestAccess(to: EKEntityType.event) { (accessGranted, error) in
+            self?.eventStore.requestAccess(to: EKEntityType.event) { accessGranted, error in
                 completion(accessGranted, error)
             }
         }
@@ -180,6 +239,7 @@ class NativeEventManager: NSObject {
 
         let eventTitle: String? = event.title.isHtml() ? event.title.attributedText()?.string : event.title
         let eventDescription: String? = event.description?.isHtml() ?? false ? event.description?.attributedText()?.string : event.description
+
         let newEvent = EKEvent(eventStore: eventStore)
 
         var startDate = event.startDate
@@ -195,18 +255,20 @@ class NativeEventManager: NSObject {
         /// without this validation, you will get issue in calendar when event startTime in summer time zone and endTime in winter
         if !currentTimeIsSummer {
             if startInSummerTime {
-                startDate = startDate.adding(minutes: -1 * 60)
+                startDate = startDate.adding(minutes: -Constants.minutesInHour)
             }
+
             if endInSummerTime {
-                endDate = endDate.adding(minutes: -1 * 60)
+                endDate = endDate.adding(minutes: -Constants.minutesInHour)
             }
         }
         else {
             if !startInSummerTime {
-                startDate = startDate.adding(minutes: 1 * 60)
+                startDate = startDate.adding(minutes: Constants.minutesInHour)
             }
+
             if !endInSummerTime {
-                endDate = endDate.adding(minutes: 1 * 60)
+                endDate = endDate.adding(minutes: Constants.minutesInHour)
             }
         }
 
@@ -214,47 +276,69 @@ class NativeEventManager: NSObject {
         newEvent.notes = eventDescription ?? ""
         newEvent.startDate = startDate
         newEvent.endDate = endDate
+        newEvent.location = event.location
+        newEvent.url = event.url
         newEvent.calendar = eventStore.defaultCalendarForNewEvents
+
         return newEvent
+    }
+
+    private func removeEvent(
+        _ event: EKEvent,
+        onSuccess: @escaping EventsManagerTextCompletion,
+        onError: @escaping EventsManagerError
+    ) {
+
+        do {
+            try self.eventStore.remove(event, span: .thisEvent, commit: true)
+            onSuccess(Constants.Success.eventRemoved)
+        }
+
+        catch {
+            onError(.message(Constants.Error.removeEventError))
+        }
     }
 
     // Try to save an event to the calendar
 
     private func generateAndAddEvent(
         _ event: EventModel?,
-        onSuccess: @escaping EventsManagerEmptyCompletion,
-        onError: EventsManagerError?) {
+        onSuccess: @escaping EventsManagerTextCompletion,
+        onError: EventsManagerError?
+    ) {
 
         guard let event = event else {
             onError?(.message(Constants.Error.notValidEvent))
             return
         }
 
+        eventExists(
+            event,
+            statusCompletion: { [weak self] status in
+                if !status {
+                    do {
+                        guard let self = self else {
+                            onError?(.message(Constants.Error.selfnil))
+                            return
+                        }
 
-        eventExists(event, statusCompletion: { [weak self] status in
-            if status {
-                do {
-                    guard let self = self else {
-                        onError?(.message("\n\n self == nil \n\n"))
-                        return
+                        let eventToAdd = self.generateEvent(event: event)
+                        try self.eventStore.save(eventToAdd, span: .thisEvent)
+                        onSuccess(Constants.Success.eventAdded)
                     }
 
-                    let eventToAdd = self.generateEvent(event: event)
-                    try self.eventStore.save(eventToAdd, span: .thisEvent)
-                    onSuccess()
-
-                }  catch let error as NSError {
-                    onError?(.error(error))
+                    catch let error as NSError {
+                        onError?(.error(error))
+                    }
                 }
-            }
-            else {
-                onError?(.message(Constants.Error.eventAlredyExist))
-            }
-        },
+                else {
+                    onError?(.message(Constants.Error.eventAlredyExist))
+                }
+            },
 
-        onError: { error in
-            onError?(error)
-        }
+            onError: { error in
+                onError?(error)
+            }
         )
     }
 
@@ -270,8 +354,8 @@ class NativeEventManager: NSObject {
             eventModalController.event = event
         }
 
-        if let rootVC = UIApplication.shared.keyWindow?.rootViewController {
-            rootVC.present(eventModalController, animated: true, completion: nil)
+        if let rootVC = UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController {
+            rootVC.present(eventModalController, animated: true)
         }
     }
 }
@@ -287,24 +371,25 @@ extension NativeEventManager: EKEventEditViewDelegate {
 
 private extension String {
     func isHtml() -> Bool {
-        let validateTest = NSPredicate(format:"SELF MATCHES %@", "<[a-z][\\s\\S]*>")
+        let validateTest = NSPredicate(format: "SELF MATCHES %@", "<[a-z][\\s\\S]*>")
         return validateTest.evaluate(with: self)
     }
 
     func attributedText() -> NSAttributedString? {
         if self.isHtml() {
             let data = Data(self.utf8)
+
             if let attributedString = try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) {
                 return attributedString
             }
         }
+
         return nil
     }
 }
 
 private extension Date {
     func adding(minutes: Int) -> Date {
-        return Calendar.current.date(byAdding: .minute, value: minutes, to: self) ?? self
+        Calendar.current.date(byAdding: .minute, value: minutes, to: self) ?? self
     }
 }
-

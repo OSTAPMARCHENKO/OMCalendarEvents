@@ -20,13 +20,16 @@ class ViewController: UIViewController {
 
     private lazy var someDefaultEvent: EventModel = {
         EventModel(
-            start: Date(),
-            end: Date().addingTimeInterval(3600),
+            start: DateFormatters.generalTimeFormatter.date(from: "2021-08-17 12:01:00") ?? Date(),
+            end: DateFormatters.generalTimeFormatter.date(from: "2021-08-17 13:03:00") ?? Date(),
             title: "Event test title",
-            description: "Test event description",
-            url: "https://some.test.url"
+            description: "Test event description" /// optional
         )
     }()
+
+    private var testID: String {
+        "608992408536-gekct0lu1rj7e2esuvg56donsmc2hpa4.apps.googleusercontent.com"
+    }
 
     // MARK: Methods(Private)
 
@@ -37,10 +40,14 @@ class ViewController: UIViewController {
 
         calendarManager.add(
             event: .fromModal(event),
-            to: .native,
-            onSuccess: {
+            to: [
+                .native
+            ],
+            onSuccess: { statusMessage in
+                debugPrint(statusMessage)
                 completion?()
             },
+
             onError: { [weak self] error in
                 self?.handleError(error)
             }
@@ -53,13 +60,46 @@ class ViewController: UIViewController {
 
         calendarManager.add(
             event: .easy(event),
-            to: .google(
-                on: self,
-                clientID: "*** your google clientid ***"
-            ),
-            onSuccess: {
+            to: [
+                .google(from: self, clientID: testID)
+            ],
+            onSuccess: { statusMessage in
+                debugPrint(statusMessage)
                 completion?()
             },
+
+            onError: { [weak self] error in
+                self?.handleError(error)
+            }
+        )
+    }
+
+    private func removeEventFromGoogleCalendar(_ event: EventModel, completion: OnEmptyAction? = nil) {
+
+        calendarManager.remove(
+            event: event,
+            from: [.google(from: self, clientID: testID)],
+            onSuccess: { statusMessage in
+                debugPrint(statusMessage)
+                completion?()
+            },
+
+            onError: { [weak self] error in
+                self?.handleError(error)
+            }
+        )
+    }
+
+    private func removeEventFromNativeCalendar(_ event: EventModel, completion: OnEmptyAction? = nil) {
+
+        calendarManager.remove(
+            event: event,
+            from: [.native],
+            onSuccess: { statusMessage in
+                debugPrint(statusMessage)
+                completion?()
+            },
+
             onError: { [weak self] error in
                 self?.handleError(error)
             }
@@ -70,16 +110,16 @@ class ViewController: UIViewController {
 
         switch error {
         case .authorizationStatus(let status):
-            print("authorizationStatus - \(status)")
+            debugPrint("authorizationStatus - \(status)")
 
         case .accessStatus(let status):
-            print("accessStatus - \(status)")
+            debugPrint("accessStatus - \(status)")
 
         case .error(let error):
-            print("error - \(error.localizedDescription)")
+            debugPrint("error - \(error.localizedDescription)")
 
         case .message(let message):
-            print("message - \(message)")
+            debugPrint("message - \(message)")
 
         default:
             return
@@ -87,7 +127,25 @@ class ViewController: UIViewController {
     }
 
     // MARK: IBActions
+    
+    @IBAction private func googleRemovePressed() {
+        removeEventFromGoogleCalendar(
+            someDefaultEvent,
+            completion: {
+                /// Do something
+            }
+        )
+    }
 
+    @IBAction private func iosRemovePressed() {
+        removeEventFromNativeCalendar(
+            someDefaultEvent,
+            completion: {
+                /// Do something
+            }
+        )
+    }
+    
     @IBAction private func googlePressed() {
         addEventToGoogleCalendar(
             someDefaultEvent,

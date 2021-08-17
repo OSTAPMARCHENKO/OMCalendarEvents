@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,15 +14,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        configureFirebase()
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController
 
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
 
         return true
     }
-}
 
+    private func configureFirebase() {
+        FirebaseApp.configure()
+    }
+}

@@ -16,19 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="00b-2J-H0b">
+                                <rect key="frame" x="40" y="752" width="334" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D50-jD-Ned">
+                                        <rect key="frame" x="0.0" y="0.0" width="167" height="110"/>
+                                        <state key="normal" title="IOS Remove"/>
+                                        <connections>
+                                            <action selector="iosRemovePressed" destination="2kY-Vr-Nvq" eventType="touchUpInside" id="JY5-MP-jBc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWZ-nC-8d9">
+                                        <rect key="frame" x="167" y="0.0" width="167" height="110"/>
+                                        <state key="normal" title="Google Remove"/>
+                                        <connections>
+                                            <action selector="googleRemovePressed" destination="2kY-Vr-Nvq" eventType="touchUpInside" id="RMs-cx-xye"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="rpn-zC-2e8"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="99z-dU-CFx">
                                 <rect key="frame" x="40" y="398" width="334" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gns-r9-jay">
                                         <rect key="frame" x="0.0" y="0.0" width="167" height="110"/>
-                                        <state key="normal" title="IOS"/>
+                                        <state key="normal" title="IOS Add"/>
                                         <connections>
                                             <action selector="iosPressed" destination="2kY-Vr-Nvq" eventType="touchUpInside" id="c93-OS-zIf"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH9-PA-KWW">
                                         <rect key="frame" x="167" y="0.0" width="167" height="110"/>
-                                        <state key="normal" title="Google"/>
+                                        <state key="normal" title="Google Add"/>
                                         <connections>
                                             <action selector="googlePressed" destination="2kY-Vr-Nvq" eventType="touchUpInside" id="R4r-VW-GH6"/>
                                         </connections>
@@ -42,9 +64,12 @@
                         <viewLayoutGuide key="safeArea" id="wEH-Oi-hS0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wEH-Oi-hS0" firstAttribute="trailing" secondItem="00b-2J-H0b" secondAttribute="trailing" constant="40" id="FSU-T8-uAZ"/>
+                            <constraint firstItem="00b-2J-H0b" firstAttribute="leading" secondItem="wEH-Oi-hS0" secondAttribute="leading" constant="40" id="GTb-wa-Jlf"/>
                             <constraint firstItem="wEH-Oi-hS0" firstAttribute="trailing" secondItem="99z-dU-CFx" secondAttribute="trailing" constant="40" id="OX0-K2-rGd"/>
                             <constraint firstItem="99z-dU-CFx" firstAttribute="leading" secondItem="wEH-Oi-hS0" secondAttribute="leading" constant="40" id="PGw-Sx-Wjs"/>
                             <constraint firstItem="99z-dU-CFx" firstAttribute="centerY" secondItem="wEH-Oi-hS0" secondAttribute="centerY" id="TG5-Bx-aeG"/>
+                            <constraint firstItem="wEH-Oi-hS0" firstAttribute="bottom" secondItem="00b-2J-H0b" secondAttribute="bottom" id="xg5-BD-IbU"/>
                         </constraints>
                     </view>
                 </viewController>

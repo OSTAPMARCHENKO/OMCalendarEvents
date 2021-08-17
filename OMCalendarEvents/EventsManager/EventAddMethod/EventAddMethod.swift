@@ -5,7 +5,8 @@
 //  Created by Ostap Marchenko on 7/30/21.
 //
 
-public enum EventAddMethod {
+public
+enum EventAddMethod {
     
     case easy(_ event: EventModel)
 
