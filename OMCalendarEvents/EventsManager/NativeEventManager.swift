@@ -280,6 +280,12 @@ class NativeEventManager: NSObject {
         newEvent.url = event.url
         newEvent.calendar = eventStore.defaultCalendarForNewEvents
 
+        if let alarm = event.alarmTime {
+            let aInterval: TimeInterval = Double(-alarm) * 60
+            let ekAlarm = EKAlarm(relativeOffset: aInterval)
+            newEvent.alarms = [ekAlarm]
+        }
+
         return newEvent
     }
 
