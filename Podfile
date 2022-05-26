@@ -8,11 +8,13 @@ target 'OMCalendarEvents' do
   pod 'GoogleAPIClientForREST/Calendar', :modular_headers => true
   pod 'GoogleSignIn', '~> 5.0'
   pod 'SwiftLint'
+  pod 'Firebase/Analytics'
+end
 
-  target 'OMExample' do
-    pod 'OMCalendarEvents'
-    pod 'Firebase/Analytics'
-  end
+
+target 'OMExample' do
+  use_frameworks!
+  pod 'OMCalendarEvents'
 end
 
 post_install do |installer|

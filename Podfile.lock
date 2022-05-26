@@ -111,7 +111,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - GoogleAPIClientForREST/Calendar
   - GoogleSignIn (~> 5.0)
-  - OMCalendarEvents (~> 0.0.7)
+  - OMCalendarEvents
   - SwiftLint
 
 SPEC REPOS:
@@ -153,6 +153,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 2951652195d79d817515df436941189b6f6e13e5
+PODFILE CHECKSUM: 4c60694104a9217a078cbc2f4c97123b87d8f5e6
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2

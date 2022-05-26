@@ -3,12 +3,11 @@
 
 import Foundation
 
-struct DateFormatters {
+enum DateFormatters {
     static let generalTimeFormatter = DateFormatters.dateFormatterWith("dd-MM-yyyy HH:mm:ss")
-    static let monthTimeFormatter  = DateFormatters.dateFormatterWith("MMM")
-    static let dayTimeFormatter  = DateFormatters.dateFormatterWith("dd")
-    static let compareTimeFormatter  = DateFormatters.dateFormatterWith("MM yyyy")
-
+    static let monthTimeFormatter = DateFormatters.dateFormatterWith("MMM")
+    static let dayTimeFormatter = DateFormatters.dateFormatterWith("dd")
+    static let compareTimeFormatter = DateFormatters.dateFormatterWith("MM yyyy")
 
     static func defaultFormatter() -> DateFormatter {
         let dateFormatter = DateFormatter()
